@@ -1,0 +1,44 @@
+package com.my.QueueUtils;
+
+import com.my.queueInterface.QueueInterface;
+
+public class QueueImplementation< T >implements QueueInterface<T> {
+	private T [] queue;
+	private int front;
+	private int rear;
+	private int size;
+	
+
+	public QueueImplementation(T[] queue, int front, int rear, int size) {
+		super();
+		this.queue = (T[]) new Object[size];
+		this.front = -1;
+		this.rear = -1;
+		this.size = size;
+	}
+
+	@Override
+	public boolean isEmpty(T data) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void printQueue(T data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addlast(T data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public T removeFirst() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,73 @@
+package com.my.QueueTester;
+
+import com.my.QueueUtils.QueueImplementation;
+import java.util.Scanner;
+
+public class QueueTester {
+
+	public static void main(String[] args) {
+		int choice;
+		try (Scanner scanner = new Scanner(System.in)) {
+			System.out.println("Enter the no of elemnts");
+			int n = scanner.nextInt();
+			scanner.nextLine();
+			QueueImplementation<Integer> numbers = new QueueImplementation<Integer>(n);
+
+			do {
+				System.out.println("Enter the function you want to do" + "\n1. Add a number" + "\n2. Remove a number"
+						+ "\n3. Show all numbers" + "\n0. exit");
+				choice = scanner.nextInt();
+				scanner.nextLine();
+
+				switch (choice) {
+
+				case 1: {
+					System.out.println("Enter a number");
+					int number = scanner.nextInt();
+					scanner.nextLine();
+
+					try {
+						numbers.addQ(number);
+					} catch (QueueOverflowException e) {
+						System.out.println(e.getMessage());
+					}
+				}
+					break;
+
+				case 2: {
+
+					try {
+
+						int deleted = numbers.removeQ();
+
+						System.out.println(deleted + "is removed");
+					} catch (QueueUnderflowException e) {
+						System.out.println(e.getMessage());
+
+					}
+
+				}
+					break;
+
+				case 3: {
+					System.out.println("Cuurent list:");
+					System.out.println(numbers);
+					numbers.showQ();
+
+				}
+					break;
+				case 0: {
+					System.out.println("Exiting the program");
+					System.exit(0);
+
+				}
+					break;
+				default: {
+					System.err.println("Invalid choice!!");
+				}
+				}
+
+			} while (choice != 0);
+		}
+	}
+}

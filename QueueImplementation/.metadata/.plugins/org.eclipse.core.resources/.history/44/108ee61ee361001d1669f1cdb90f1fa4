@@ -1,0 +1,10 @@
+package com.my.queueInterface;
+
+public interface QueueInterface<T> {
+public boolean isEmpty();
+public void printQueue(T data);
+public void addlast(T data);
+public T removeFirst();
+
+
+}

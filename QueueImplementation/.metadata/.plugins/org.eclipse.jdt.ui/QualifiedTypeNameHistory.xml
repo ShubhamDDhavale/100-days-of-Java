@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.my.QueueUtils.QueueUtils"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="com.my.QueueExceptions.QueueIsFullException"/>
+    <fullyQualifiedTypeName name="com.my.QueueExceptions.QueueIsEmptyException"/>
+    <fullyQualifiedTypeName name="com.my.QueueUtils.QueueImplementation"/>
+</qualifiedTypeNameHistroy>

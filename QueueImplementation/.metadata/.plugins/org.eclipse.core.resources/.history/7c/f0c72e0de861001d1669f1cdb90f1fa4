@@ -1,0 +1,61 @@
+package com.my.QueueUtils;
+
+import com.my.QueueExceptions.QueueIsEmptyException;
+import com.my.QueueExceptions.QueueIsFullException;
+import com.my.queueInterface.QueueInterface;
+
+public class QueueImplementation< T >implements QueueInterface<T> {
+	private T [] queue;
+	private int front;
+	private int rear;
+	private int size;
+	
+
+	public QueueImplementation(T[] queue, int front, int rear, int size) {
+		super();
+		this.queue = (T[]) new Object[size];
+		this.front = -1;
+		this.rear = -1;
+		this.size = size;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return (this.front==this.rear);
+	}
+
+	@Override
+	public void printQueue(T data) {
+		for(int i=0; i<rear ; i++) {
+			System.out.println(queue[i]+ ";");
+		}
+		
+	}
+
+	@Override
+	public void addlast(T data) throws QueueIsFullException {
+		this.rear=rear+1;
+		if (isFull()) {
+			throw new QueueIsFullException("oops the queue is full!!");
+		
+		}
+		this.queue[this.rear]= data;
+		
+	}
+
+	@Override
+	public T removeFirst() throws QueueIsEmptyException {
+		if (isEmpty()) {
+			throw new QueueIsEmptyException(" The queue is already Empty!!");
+		}
+		T deleted=  this.queue[this.front];
+		this.front=this.front+1;
+		return deleted;
+	}
+
+	@Override
+	public boolean isFull() {
+		return (this.rear==this.size);
+	}
+
+}

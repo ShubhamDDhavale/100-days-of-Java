@@ -1,0 +1,25 @@
+package com.my.QueueUtils;
+
+public class QueueUtils {
+	
+	
+	private int rear;
+	private int front;
+	
+	public QueueUtils() {
+		
+		rear = -1;
+		front=-1;
+	}
+
+	public void addFirst(int element) {
+		
+		
+		
+	}
+	public void addLast(int element) {
+		
+		
+	}
+	public 
+}

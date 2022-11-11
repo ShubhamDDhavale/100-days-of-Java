@@ -1,0 +1,5 @@
+package com.my.QueueExceptions;
+
+public class QueueIsFullException extends Exception {
+
+}

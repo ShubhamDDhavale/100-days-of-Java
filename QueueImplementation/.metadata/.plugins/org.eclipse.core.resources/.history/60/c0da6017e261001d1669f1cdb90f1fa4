@@ -1,0 +1,7 @@
+package com.my.QueueUtils;
+
+import com.my.queueInterface.QueueInterface;
+
+public class QueueImplementation implements QueueInterface<T> {
+
+}
