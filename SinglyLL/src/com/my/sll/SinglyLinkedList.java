@@ -1,6 +1,7 @@
 package com.my.sll;
 
 import com.my.node.Node;
+import com.my.sllExceprtion.NoSuchElementFoundException;
 
 public class SinglyLinkedList implements SinglyLLInterface {
 	private Node head;
@@ -71,8 +72,32 @@ public class SinglyLinkedList implements SinglyLLInterface {
 	}
 
 	@Override
-	public int delete(int data) {
-		// TODO Auto-generated method stub
-		return 0;
+	public Node delete(int data) throws NoSuchElementFoundException {
+		Node deleted=null;
+		Node current= head ;
+		Node previous= null;
+		if(head.getData()== data) {
+			deleted= head;
+			head= head.getNext();
+			return deleted;
+		}
+		while(current!= null) {
+			if (current.getData()== data) {
+				if (current== tail) {
+					deleted= current;
+					tail= previous;
+					tail.setNext(null);
+					break;
+				}
+				deleted= current;
+				previous.setNext(current.getNext());
+			}
+			previous = current;
+			current = current.getNext();
+		}
+		if(deleted== null) {
+			throw new NoSuchElementFoundException("This elemnt is not found in the obove list");
+		}
+		return deleted;
 	}
 }
