@@ -1,0 +1,11 @@
+package com.my.dcllInterface;
+
+public interface DCLLInterface<T> {
+	public void addFirst (T data);
+	public void addLast (T data);
+	public void addAfter (T element ,T data);
+	public T deleteFirst();
+	public T deleteLast();
+	public T delete(T data);
+
+}

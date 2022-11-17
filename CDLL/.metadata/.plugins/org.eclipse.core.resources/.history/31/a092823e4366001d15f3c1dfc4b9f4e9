@@ -1,0 +1,6 @@
+package com.my.dcllInterface;
+
+public interface DCLLInterface<T> {
+	public void addFirst (T data);
+
+}

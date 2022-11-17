@@ -1,0 +1,5 @@
+package com.my.dcllInterface;
+
+public class DCLLImpl implements DCLLInterface<T> {
+
+}

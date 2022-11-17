@@ -1,0 +1,27 @@
+package com.my.dcllTester;
+
+import com.my.dcllInterface.DCLLImpl;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		DCLLImpl<Integer> first = new DCLLImpl();
+		
+		first.addFirst(15);
+		first.addFirst(20);
+		first.addFirst(25);
+		first.addFirst(30);
+		first.addFirst(35);
+		first.addFirst(40);
+		first.show();
+		first.addLast(10);
+		first.addLast(5);
+		first.show();
+		first.addAfter(5, 7);
+		first.addAfter(15, 17);
+		first.addAfter(40, 42);
+		first.show();
+		
+	}
+
+}

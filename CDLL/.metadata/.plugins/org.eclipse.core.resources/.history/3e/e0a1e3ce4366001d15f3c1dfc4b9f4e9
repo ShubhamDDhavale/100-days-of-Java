@@ -1,0 +1,47 @@
+package com.my.dcllInterface;
+
+public class DCLLImpl<T> implements DCLLInterface<T> {
+
+	@Override
+	public void addFirst(T data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addLast(T data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addAfter(T element, T data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public T deleteFirst() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T deleteLast() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T delete(T data) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

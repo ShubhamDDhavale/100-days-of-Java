@@ -1,0 +1,5 @@
+package com.my.dcllException;
+
+public class ElementNotFoundException extends Exception {
+
+}

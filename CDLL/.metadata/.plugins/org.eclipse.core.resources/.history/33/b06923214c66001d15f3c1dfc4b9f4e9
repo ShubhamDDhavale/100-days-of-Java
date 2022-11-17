@@ -1,0 +1,97 @@
+package com.my.dcllInterface;
+
+import com.my.dcllException.ElementNotFoundException;
+import com.my.node.Node;
+
+public class DCLLImpl<T> implements DCLLInterface<T> {
+	private Node<T> head;
+	
+	
+
+	public DCLLImpl() {
+		this.head = new Node<>(null);
+		this.head.setNext(head);
+		this.head.setPrevious(head);
+	}
+
+	@Override
+	public void addFirst(T data) {
+		Node<T> newNode= new Node<>(data);
+	
+			newNode.setNext(head.getNext());
+			newNode.setPrevious(head);
+			head.getNext().setPrevious(newNode);
+			head.setNext(newNode);
+						
+	}
+
+	@Override
+	public void addLast(T data) {
+		Node<T> newNode= new Node<>(data);
+		newNode.setNext(head);
+		newNode.setPrevious(head.getPrevious());
+		head.getPrevious().setNext(newNode);
+		head.setPrevious(newNode);
+	}
+
+	@Override
+	public void addAfter(T element, T data) {
+		Node<T> newNode= new Node<>(data);
+		Node<T> current= head.getNext();
+		while(current!= head) {
+			if(current.getData()== element) {
+				newNode.setNext(current.getNext());
+				newNode.setPrevious(current);
+				current.getNext().setPrevious(newNode);
+				current.setNext(newNode);
+				return;
+			}
+			current= current.getNext();
+		}
+	}
+
+	@Override
+	public T deleteFirst() {
+		Node<T> current= head.getNext();
+		head.setNext(current.getNext());
+		current.getNext().setPrevious(head);
+		return current.getData();
+	}
+
+	@Override
+	public T deleteLast() {
+		Node<T> current= head.getPrevious();
+		head.setPrevious(current.getPrevious());
+		current.getPrevious().setNext(head);
+		return current.getData();
+	}
+
+	@Override
+	public T delete(T data) throws ElementNotFoundException {
+		Node<T> deleted= null;
+		Node<T> current= head.getNext();
+		while(current!= head) {
+			if(current.getData()== data) {
+				deleted = current;
+				current.getPrevious().setNext(current.getNext());
+				current.getNext().setPrevious(current.getPrevious());
+				
+			}
+		}
+		if(deleted== null ) {
+			throw new ElementNotFoundException("Element does not Exist in the given data!!");
+		}
+		return  deleted.getData();
+	}
+
+	@Override
+	public void show() {
+		Node<T> current= head.getNext();
+		while(current!= head) {
+			System.out.println(current.getData());
+			current= current.getNext();
+		}
+		
+	}
+
+}

@@ -1,0 +1,44 @@
+package com.my.dcllInterface;
+
+import com.my.node.Node;
+
+public class DCLLImpl<T> implements DCLLInterface<T> {
+	private Node<T> head;
+	
+
+	@Override
+	public void addFirst(T data) {
+		
+	}
+
+	@Override
+	public void addLast(T data) {
+		
+	}
+
+	@Override
+	public void addAfter(T element, T data) {
+		
+	}
+
+	@Override
+	public T deleteFirst() {
+		return null;
+	}
+
+	@Override
+	public T deleteLast() {
+		return null;
+	}
+
+	@Override
+	public T delete(T data) {
+		return null;
+	}
+
+	@Override
+	public void show() {
+		
+	}
+
+}
