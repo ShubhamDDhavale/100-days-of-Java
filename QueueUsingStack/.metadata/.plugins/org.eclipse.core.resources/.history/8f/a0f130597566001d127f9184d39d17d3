@@ -1,0 +1,13 @@
+package com.my.queueTester;
+
+import com.my.queue.Queue;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		Queue newQ = new Queue<Integer>();
+		
+
+	}
+
+}

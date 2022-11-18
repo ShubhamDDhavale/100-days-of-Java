@@ -1,0 +1,6 @@
+package com.my.queueInterfaces;
+
+public interface QueueInterfaces<T> {
+	public void addQ(T data);
+	public T deleteQ();
+}

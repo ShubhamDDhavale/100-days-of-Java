@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\dhava\Desktop\cdac acts\sts\QueueUsingStack\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3616084957.index
+2237445501.index

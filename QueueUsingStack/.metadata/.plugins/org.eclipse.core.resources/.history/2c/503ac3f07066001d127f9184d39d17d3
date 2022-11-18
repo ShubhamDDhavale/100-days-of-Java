@@ -1,0 +1,29 @@
+package com.my.queue;
+
+import java.util.Stack;
+
+import com.my.queueInterfaces.QueueInterfaces;
+
+public class Queue implements QueueInterfaces{
+	Stack<T> Queue = new Stack<T>()
+
+	@Override
+	public void addQ(Object data) {
+	}
+
+	@Override
+	public Object deleteQ() {
+		return null;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return false;
+	}
+
+	@Override
+	public boolean isFull() {
+		return false;
+	}
+
+}

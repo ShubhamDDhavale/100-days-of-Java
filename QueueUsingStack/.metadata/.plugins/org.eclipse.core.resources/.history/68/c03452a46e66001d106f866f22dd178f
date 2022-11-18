@@ -1,0 +1,5 @@
+package com.my.queueInterface;
+
+public interface QueueInterface {
+
+}

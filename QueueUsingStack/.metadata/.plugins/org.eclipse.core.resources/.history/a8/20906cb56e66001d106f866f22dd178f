@@ -1,0 +1,10 @@
+package com.my.queueInterface;
+
+public interface QueueInterface <T>{
+	public void addQ(T data);
+	public T removeQ();
+	public boolean isEmpty();
+	public boolean isFull();
+	
+
+}

@@ -1,0 +1,47 @@
+package com.my.queue;
+
+import java.util.Stack;
+
+import com.my.queueException.QueueIsEmptyException;
+import com.my.queueInterfaces.QueueInterfaces;
+
+public class Queue<T> implements QueueInterfaces<T>{
+	Stack<T> Queue = new Stack<T>();
+	Stack<T> temp = new Stack<T>();
+
+	@Override
+	public void addQ(T data) {
+	
+			Queue.push(data);
+		
+	}
+
+	@Override
+	public T deleteQ() throws QueueIsEmptyException {
+		if (Queue.isEmpty()) {
+			throw new QueueIsEmptyException(" The Queue is Already Empty!!");
+		}
+		while(!Queue.isEmpty()) {
+			temp.push(Queue.pop());
+		}
+		
+	
+		T deleted=temp.pop();
+		while(!temp.isEmpty()) {
+			Queue.push(temp.pop());
+		}
+		
+		return deleted;
+	}
+
+	@Override
+	public void show() {
+		for (Queue q : Queue<T>()) {
+			System.out.println(q);
+		}
+		
+	}
+
+	
+
+}
